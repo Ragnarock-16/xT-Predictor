@@ -17,15 +17,15 @@ LEARNING_RATE = 0.0001
 class RLM(Dataset):
     
     def __init__(self):
-        with open('/Users/nour/Documents/M1/TER/Cnn_model/Game2/label.json', 'r') as file:
+        with open('./Game2/label.json', 'r') as file:
             self.image_label = torch.tensor(json.load(file))
-        with open('/Users/nour/Documents/M1/TER/Cnn_model/Game2/home_1.json', 'r') as file:
+        with open('./Game2/home_1.json', 'r') as file:
             self.home_1 = torch.tensor(json.load(file))
-        with open('/Users/nour/Documents/M1/TER/Cnn_model/Game2/away_1.json', 'r') as file:
+        with open('./Game2/away_1.json', 'r') as file:
             self.away_1 = torch.tensor(json.load(file))
-        with open('/Users/nour/Documents/M1/TER/Cnn_model/Game2/home_2.json', 'r') as file:
+        with open('./Game2/home_2.json', 'r') as file:
             self.home_2 = torch.tensor(json.load(file))
-        with open('/Users/nour/Documents/M1/TER/Cnn_model/Game2/away_2.json', 'r') as file:
+        with open('./Game2/away_2.json', 'r') as file:
             self.away_2 = torch.tensor(json.load(file))
 
     def __getitem__(self,index):
